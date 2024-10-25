@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Guia2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Guia2_MachineLearning</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7475,7 +7475,25 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d60bebe0-d927-473d-b1df-ba224f1f7900">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dc167079-2bff-4360-8956-a5adaa90cb41">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Proyecto-2-%E2%80%93-Modelos-de-clasificaci%C3%B3n-supervisada-para-evaluar-la-calidad-de-un-autom%C3%B3vil">Proyecto 2 – Modelos de clasificación supervisada para evaluar la calidad de un automóvil<a class="anchor-link" href="#Proyecto-2-%E2%80%93-Modelos-de-clasificaci%C3%B3n-supervisada-para-evaluar-la-calidad-de-un-autom%C3%B3vil">¶</a></h1><h2 id="Integrantes:">Integrantes:<a class="anchor-link" href="#Integrantes:">¶</a></h2><ul>
+<li>David Moreno</li>
+<li>Yodid Cardenas</li>
+<li>Santiago Amado</li>
+</ul>
+<h2 id="Descripci%C3%B3n-del-Problema:">Descripción del Problema:<a class="anchor-link" href="#Descripci%C3%B3n-del-Problema:">¶</a></h2><p>El problema que se abordará en este proyecto consiste en la evaluación de la calidad de un automóvil utilizando modelos de clasificación supervisada. El objetivo es predecir la categoría de calidad de un automóvil basada en varias características como el precio de compra, el costo de mantenimiento, la capacidad de pasajeros, el tamaño del maletero, y el nivel de seguridad. Se utilizará la base de datos <code>car.data</code> para entrenar y probar varios modelos de aprendizaje supervisado y determinar cuál es el más adecuado.</p>
+<p>Las variables de entrada incluyen características cualitativas relacionadas con el precio de compra, mantenimiento, número de puertas, capacidad de personas, tamaño del maletero y nivel de seguridad, mientras que la variable de salida es la categoría de calidad (<code>class</code>), que tiene cuatro posibles valores: <code>unacc</code>, <code>acc</code>, <code>good</code>, y <code>vgood</code>.</p>
+<p>La solución propuesta implica la aplicación de diferentes modelos de clasificación y la evaluación de su desempeño en términos de precisión, recall, f1-score y otras métricas, para seleccionar el modelo más adecuado.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d60bebe0-d927-473d-b1df-ba224f1f7900">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7565,7 +7583,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="exploramos-a-continuacion-el-tipo-de-datos-de-cada-modelo">exploramos a continuacion el tipo de datos de cada modelo<a class="anchor-link" href="#exploramos-a-continuacion-el-tipo-de-datos-de-cada-modelo">¶</a></h3>
+<h3 id="Exploramos-a-continuacion-el-tipo-de-datos-de-cada-modelo">Exploramos a continuacion el tipo de datos de cada modelo<a class="anchor-link" href="#Exploramos-a-continuacion-el-tipo-de-datos-de-cada-modelo">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7618,7 +7636,7 @@ Columna class
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="todos-los-atributos-son-categorias-ya-que-cuentan-con-valores-de-texto-limitados">todos los atributos son categorias ya que cuentan con valores de texto limitados<a class="anchor-link" href="#todos-los-atributos-son-categorias-ya-que-cuentan-con-valores-de-texto-limitados">¶</a></h3>
+<h3 id="Todos-los-atributos-son-categorias-ya-que-cuentan-con-valores-de-texto-limitados">Todos los atributos son categorias ya que cuentan con valores de texto limitados<a class="anchor-link" href="#Todos-los-atributos-son-categorias-ya-que-cuentan-con-valores-de-texto-limitados">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7761,7 +7779,7 @@ Columna class
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="observese-que-el-vector-queda-almacenado-en-matrices-dispersas-que-se-caracterizan-por-tener-muchos-m%C3%A1s-ceros-que-unos.--En-estas-matrices-no-se-almacenan-sino-los-valores-mayores-que-cero-en-una-eestructura-que-ahorra-memoria">observese que el vector queda almacenado en matrices dispersas que se caracterizan por tener muchos más ceros que unos.  En estas matrices no se almacenan sino los valores mayores que cero en una eestructura que ahorra memoria<a class="anchor-link" href="#observese-que-el-vector-queda-almacenado-en-matrices-dispersas-que-se-caracterizan-por-tener-muchos-m%C3%A1s-ceros-que-unos.--En-estas-matrices-no-se-almacenan-sino-los-valores-mayores-que-cero-en-una-eestructura-que-ahorra-memoria">¶</a></h3>
+<h3 id="Observese-que-el-vector-queda-almacenado-en-matrices-dispersas-que-se-caracterizan-por-tener-muchos-m%C3%A1s-ceros-que-unos.--En-estas-matrices-no-se-almacenan-sino-los-valores-mayores-que-cero-en-una-eestructura-que-ahorra-memoria">Observese que el vector queda almacenado en matrices dispersas que se caracterizan por tener muchos más ceros que unos.  En estas matrices no se almacenan sino los valores mayores que cero en una eestructura que ahorra memoria<a class="anchor-link" href="#Observese-que-el-vector-queda-almacenado-en-matrices-dispersas-que-se-caracterizan-por-tener-muchos-m%C3%A1s-ceros-que-unos.--En-estas-matrices-no-se-almacenan-sino-los-valores-mayores-que-cero-en-una-eestructura-que-ahorra-memoria">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7799,7 +7817,7 @@ Columna class
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="la-variable-objetivo-es-la-de-la-clase.--A-continuaci%C3%B3n,-ya-deber%C3%ADan-estar-todas-las-variables-listas-para-empezar-a-probar-modelos.--Nos-falta-identificar-m%C3%A9tricas-para-ver-que-tan-biebn-se-hacen-las-predicciones-de-los-modelos">la variable objetivo es la de la clase.  A continuación, ya deberían estar todas las variables listas para empezar a probar modelos.  Nos falta identificar métricas para ver que tan biebn se hacen las predicciones de los modelos<a class="anchor-link" href="#la-variable-objetivo-es-la-de-la-clase.--A-continuaci%C3%B3n,-ya-deber%C3%ADan-estar-todas-las-variables-listas-para-empezar-a-probar-modelos.--Nos-falta-identificar-m%C3%A9tricas-para-ver-que-tan-biebn-se-hacen-las-predicciones-de-los-modelos">¶</a></h4><p>la variable objetivo tambien debe transformarse en diferentes categorias numéricas.  Aquí podemos usar otra función de scikit que simplemente nos cambie cada valor por un ordinal</p>
+<h4 id="La-variable-objetivo-es-la-de-la-clase.--A-continuaci%C3%B3n,-ya-deber%C3%ADan-estar-todas-las-variables-listas-para-empezar-a-probar-modelos.--Nos-falta-identificar-m%C3%A9tricas-para-ver-que-tan-biebn-se-hacen-las-predicciones-de-los-modelos">La variable objetivo es la de la clase.  A continuación, ya deberían estar todas las variables listas para empezar a probar modelos.  Nos falta identificar métricas para ver que tan biebn se hacen las predicciones de los modelos<a class="anchor-link" href="#La-variable-objetivo-es-la-de-la-clase.--A-continuaci%C3%B3n,-ya-deber%C3%ADan-estar-todas-las-variables-listas-para-empezar-a-probar-modelos.--Nos-falta-identificar-m%C3%A9tricas-para-ver-que-tan-biebn-se-hacen-las-predicciones-de-los-modelos">¶</a></h4><p>La variable objetivo tambien debe transformarse en diferentes categorias numéricas.  Aquí podemos usar otra función de scikit que simplemente nos cambie cada valor por un ordinal</p>
 </div>
 </div>
 </div>
@@ -7905,7 +7923,7 @@ Columna class
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="antes-de-comenzar-hagamos-un-particionamiento-de-los-datos-entre-entrenamiento-y-validaci%5Bon-usando-las-herramientas-de-scikit-learn">antes de comenzar hagamos un particionamiento de los datos entre entrenamiento y validaci[on usando las herramientas de scikit learn<a class="anchor-link" href="#antes-de-comenzar-hagamos-un-particionamiento-de-los-datos-entre-entrenamiento-y-validaci%5Bon-usando-las-herramientas-de-scikit-learn">¶</a></h3>
+<h3 id="Antes-de-comenzar-hagamos-un-particionamiento-de-los-datos-entre-entrenamiento-y-validaci%5Bon-usando-las-herramientas-de-scikit-learn">Antes de comenzar hagamos un particionamiento de los datos entre entrenamiento y validaci[on usando las herramientas de scikit learn<a class="anchor-link" href="#Antes-de-comenzar-hagamos-un-particionamiento-de-los-datos-entre-entrenamiento-y-validaci%5Bon-usando-las-herramientas-de-scikit-learn">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7946,20 +7964,6 @@ Columna class
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Primero-probamos-un-modelo-lineal">Primero probamos un modelo lineal<a class="anchor-link" href="#Primero-probamos-un-modelo-lineal">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=dd3e751e-4abd-48a2-b96b-6d040baca60d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -8114,7 +8118,7 @@ Coefficient of determination: 0.25
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="ya-que-todas-las-variables-son-categ%C3%B3ricas,-debemos-usar-algoritmos-supervisados-para-clasificaci%C3%B3n-que-nos-permitan-usar-variable-categoricas-de-forma-natural.">ya que todas las variables son categóricas, debemos usar algoritmos supervisados para clasificación que nos permitan usar variable categoricas de forma natural.<a class="anchor-link" href="#ya-que-todas-las-variables-son-categ%C3%B3ricas,-debemos-usar-algoritmos-supervisados-para-clasificaci%C3%B3n-que-nos-permitan-usar-variable-categoricas-de-forma-natural.">¶</a></h3>
+<h3 id="Ya-que-todas-las-variables-son-categ%C3%B3ricas,-debemos-usar-algoritmos-supervisados-para-clasificaci%C3%B3n-que-nos-permitan-usar-variable-categoricas-de-forma-natural.">Ya que todas las variables son categóricas, debemos usar algoritmos supervisados para clasificación que nos permitan usar variable categoricas de forma natural.<a class="anchor-link" href="#Ya-que-todas-las-variables-son-categ%C3%B3ricas,-debemos-usar-algoritmos-supervisados-para-clasificaci%C3%B3n-que-nos-permitan-usar-variable-categoricas-de-forma-natural.">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8125,7 +8129,7 @@ Coefficient of determination: 0.25
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="comenzaremos-con-un-ejercicio-de-regresion-logistica,-ya-que-hemos-convertido-las-clases-de-clasifciaci%C3%B3n-en-ordinales">comenzaremos con un ejercicio de regresion logistica, ya que hemos convertido las clases de clasifciación en ordinales<a class="anchor-link" href="#comenzaremos-con-un-ejercicio-de-regresion-logistica,-ya-que-hemos-convertido-las-clases-de-clasifciaci%C3%B3n-en-ordinales">¶</a></h4>
+<h4 id="Comenzaremos-con-un-ejercicio-de-regresion-logistica,-ya-que-hemos-convertido-las-clases-de-clasifciaci%C3%B3n-en-ordinales">Comenzaremos con un ejercicio de regresion logistica, ya que hemos convertido las clases de clasifciación en ordinales<a class="anchor-link" href="#Comenzaremos-con-un-ejercicio-de-regresion-logistica,-ya-que-hemos-convertido-las-clases-de-clasifciaci%C3%B3n-en-ordinales">¶</a></h4>
 </div>
 </div>
 </div>
@@ -8206,7 +8210,7 @@ weighted avg       0.92      0.92      0.92       346
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="continuamos-con-un-ejercicio-donde-clasificamos-usando-un-%C3%A1rbol-de-decisi%C3%B3n">continuamos con un ejercicio donde clasificamos usando un árbol de decisión<a class="anchor-link" href="#continuamos-con-un-ejercicio-donde-clasificamos-usando-un-%C3%A1rbol-de-decisi%C3%B3n">¶</a></h3>
+<h3 id="Continuamos-con-un-ejercicio-donde-clasificamos-usando-un-%C3%A1rbol-de-decisi%C3%B3n">Continuamos con un ejercicio donde clasificamos usando un árbol de decisión<a class="anchor-link" href="#Continuamos-con-un-ejercicio-donde-clasificamos-usando-un-%C3%A1rbol-de-decisi%C3%B3n">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8286,7 +8290,7 @@ weighted avg       0.96      0.96      0.96       346
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="por-%C3%BAltimo-usamos-un-clasificador-RandomForest">por último usamos un clasificador RandomForest<a class="anchor-link" href="#por-%C3%BAltimo-usamos-un-clasificador-RandomForest">¶</a></h3>
+<h3 id="Por-%C3%BAltimo-usamos-un-clasificador-RandomForest">Por último usamos un clasificador RandomForest<a class="anchor-link" href="#Por-%C3%BAltimo-usamos-un-clasificador-RandomForest">¶</a></h3>
 </div>
 </div>
 </div>
